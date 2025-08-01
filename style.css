@@ -1,0 +1,251 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.serving-options-wrapper {
+  width: 100%;
+  overflow-x: visible;
+  padding-bottom: 0;
+}
+
+.serving-options-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  flex: 1 1 calc(33.33% - 8px);
+  min-width: 0;
+  max-width: 100%;
+  cursor: pointer;
+  box-sizing: border-box;
+  text-align: center;
+  height: auto;
+}
+
+.card.active {
+  outline: 2px solid #047857;
+  box-shadow: 0 12px 18px -4px rgba(0, 128, 0, 0.3);
+}
+
+.card-header {
+  padding: 8px 16px;
+  background-color: #c9eecb;
+  color: #1d643b;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+}
+
+.card-header p {
+  margin: 5px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  padding: 16px;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.card-title span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card-subtitle {
+  color: #707170;
+  margin-top: 4px;
+}
+
+.price-label {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
+.buy-one-time-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 640px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.buy-one-time-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+.buy-one-time-label input[type="radio"] {
+  margin-right: 12px;
+  width: 20px;
+  height: 20px;
+  accent-color: #047857;
+}
+
+.buy-one-time-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.buy-one-time-details {
+  font-size: 14px;
+  color: #6b7280;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+.buy-one-time-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #374151;
+  align-self: center;
+}
+
+.buy-one-time-price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.buy-one-time-price-per-bottle {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 400;
+  margin-bottom: 2px;
+}
+
+.buy-one-time-price-total {
+  font-size: 20px;
+  font-weight: 700;
+  color: #374151;
+}
+
+@media (min-width: 640px) {
+  .serving-options-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (max-width: 650px) {
+  .card-title {
+    font-size: 20px;
+  }
+
+  .card-title span {
+    font-size: 20px;
+  }
+
+  .card-subtitle {
+    font-size: 15px;
+  }
+
+  .card-header {
+    font-size: 13px;
+  }
+}
+@media (max-width: 550px) {
+  .card-title {
+    font-size: 17px;
+  }
+
+  .card-title span {
+    font-size: 17px;
+  }
+
+  .card-subtitle {
+    font-size: 12px;
+  }
+
+  .card-header {
+    font-size: 11px;
+  }
+  .price-label {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+@media (max-width: 450px) {
+  .card-title {
+    font-size: 16px;
+  }
+
+  .card-title span {
+    font-size: 16px;
+  }
+
+  .card-subtitle {
+    font-size: 12px;
+  }
+
+  .card-header {
+    font-size: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .buy-one-time-card {
+    font-size: 10px;
+  }
+}
+@media (max-width: 380px) {
+  .card-title {
+    font-size: 12px;
+  }
+
+  .card-title span {
+    font-size: 12px;
+  }
+
+  .card-subtitle {
+    font-size: 10px;
+  }
+}

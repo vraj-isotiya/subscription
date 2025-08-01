@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subscription Options</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- Serving Options -->
+      <div class="serving-options-wrapper">
+        <div class="serving-options-container">
+          <!-- Annually Card -->
+          <div class="card" data-quantity="12" data-discount="27">
+            <div class="card-header"><p>Save 27%</p></div>
+            <div class="card-content">
+              <p class="card-title">Annually</p>
+              <p class="card-subtitle quantity-label"></p>
+              <p class="card-subtitle per-bottle-label"></p>
+              <p class="card-subtitle price-label"></p>
+            </div>
+          </div>
+
+          <!-- Semi-Annually Card -->
+          <div class="card" data-quantity="6" data-discount="15">
+            <div class="card-header"><p>Save 15%</p></div>
+            <div class="card-content">
+              <p class="card-title">Semi-Annually</p>
+              <p class="card-subtitle quantity-label"></p>
+              <p class="card-subtitle per-bottle-label"></p>
+              <p class="card-subtitle price-label"></p>
+            </div>
+          </div>
+
+          <!-- Monthly Card -->
+          <div class="card" data-quantity="1" data-discount="10">
+            <div class="card-header"><p>Save 10%</p></div>
+            <div class="card-content">
+              <p class="card-title">Monthly</p>
+              <p class="card-subtitle quantity-label"></p>
+              <p class="card-subtitle per-bottle-label"></p>
+              <p class="card-subtitle price-label"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Individual Card (One-Time Purchase) -->
+      <div class="buy-one-time-card" data-base-price="44">
+        <label class="buy-one-time-label">
+          <input type="radio" name="purchase_option" value="one_time" />
+          <div>
+            <p class="buy-one-time-text">Individual</p>
+            <p class="buy-one-time-details">1 Bottle</p>
+          </div>
+        </label>
+        <div class="buy-one-time-price-container">
+          <span class="buy-one-time-price-per-bottle">$44 / bottle</span>
+          <span class="buy-one-time-price-total">$44</span>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
