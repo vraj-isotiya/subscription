@@ -1,40 +1,43 @@
 document.addEventListener("DOMContentLoaded", function () {
   const baseCard = document.querySelector(".buy-one-time-card");
-  const basePrice = parseFloat(baseCard.dataset.basePrice || "44");
+  const basePrice = parseFloat(baseCard?.dataset.basePrice || "44");
 
+  //render all card price and quantity
   document.querySelectorAll(".card").forEach((card) => {
-    const quantity = parseInt(card.dataset.quantity, 10) || 1;
-    const discount = parseFloat(card.dataset.discount) || 0;
+    const quantity = parseInt(card.dataset.quantity || "1", 10);
+    const discount = parseFloat(card.dataset.discount || "0");
 
     const originalTotal = basePrice * quantity;
     const discountedTotal = originalTotal * (1 - discount / 100);
     const perBottlePrice = discountedTotal / quantity;
 
-    const quantityLabel = card.querySelector(".quantity-label");
-    const perBottleLabel = card.querySelector(".per-bottle-label");
-    const priceLabel = card.querySelector(".price-label");
-
-    if (quantityLabel)
-      quantityLabel.textContent = `${quantity} Bottle${
-        quantity > 1 ? "s" : ""
-      }`;
-    if (perBottleLabel)
-      perBottleLabel.textContent = `$${perBottlePrice.toFixed(2)} / bottle`;
-    if (priceLabel) {
-      priceLabel.innerHTML = `<s class="original-price" style="color: #9ca3af">$${originalTotal.toFixed(
+    card.querySelector(".quantity-label").textContent = `${quantity} Bottle${
+      quantity > 1 ? "s" : ""
+    }`;
+    card.querySelector(
+      ".per-bottle-label"
+    ).textContent = `$${perBottlePrice.toFixed(2)} / bottle`;
+    card.querySelector(".price-label").innerHTML = `
+      <s class="original-price" style="color: #9ca3af">$${originalTotal.toFixed(
         2
-      )}</s><strong class="discounted-price" style="color: #111827">$${discountedTotal.toFixed(
+      )}</s>
+      <strong class="discounted-price" style="color: #111827">$${discountedTotal.toFixed(
         2
-      )}</strong>`;
-    }
+      )}</strong>
+    `;
   });
 
-  // Toggle active class
-  const cards = document.querySelectorAll(".card");
-  cards.forEach((card) => {
+  // to higilight card is active or not
+  const allCards = document.querySelectorAll(".card, .buy-one-time-card");
+
+  allCards.forEach((card) => {
     card.addEventListener("click", () => {
-      cards.forEach((c) => c.classList.remove("active"));
+      allCards.forEach((c) => c.classList.remove("active"));
       card.classList.add("active");
+
+      // Check any radio input inside the clicked card
+      const radio = card.querySelector('input[type="radio"]');
+      if (radio) radio.checked = true;
     });
   });
 });

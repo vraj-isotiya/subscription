@@ -49,8 +49,11 @@ body {
 }
 
 .card.active {
-  outline: 2px solid #047857;
-  box-shadow: 0 12px 18px -4px rgba(0, 128, 0, 0.3);
+  border: 2px solid #047857;
+}
+
+.buy-one-time-card.active {
+  border: 2px solid #047857;
 }
 
 .card-header {
