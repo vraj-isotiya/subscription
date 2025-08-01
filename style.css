@@ -9,7 +9,7 @@ body {
   min-height: 100vh;
 }
 
-.main-container {
+.tr-main-container {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -17,13 +17,13 @@ body {
   width: 100%;
 }
 
-.serving-options-wrapper {
+.tr-serving-options-wrapper {
   width: 100%;
   overflow-x: visible;
   padding-bottom: 0;
 }
 
-.serving-options-container {
+.tr-serving-options-container {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
@@ -32,7 +32,7 @@ body {
   width: 100%;
 }
 
-.card {
+.tr-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -48,15 +48,15 @@ body {
   height: auto;
 }
 
-.card.active {
+.tr-card.active {
   border: 2px solid #047857;
 }
 
-.buy-one-time-card.active {
+.tr-buy-one-time-card.active {
   border: 2px solid #047857;
 }
 
-.card-header {
+.tr-card-header {
   padding: 8px 16px;
   background-color: #c9eecb;
   color: #1d643b;
@@ -69,11 +69,11 @@ body {
   letter-spacing: 0.5px;
 }
 
-.card-header p {
+.tr-card-header p {
   margin: 5px;
 }
 
-.card-content {
+.tr-card-content {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -81,24 +81,24 @@ body {
   padding: 16px;
 }
 
-.card-title {
+.tr-card-title {
   font-size: 24px;
   font-weight: bold;
   margin: 0;
   line-height: 1.2;
 }
 
-.card-title span {
+.tr-card-title span {
   font-size: 24px;
   font-weight: bold;
 }
 
-.card-subtitle {
+.tr-card-subtitle {
   color: #707170;
   margin-top: 4px;
 }
 
-.price-label {
+.tr-price-label {
   display: flex;
   flex-direction: row;
   gap: 4px;
@@ -106,7 +106,15 @@ body {
   align-items: center;
 }
 
-.buy-one-time-card {
+.tr-original-price {
+  color: #9ca3af;
+}
+
+.tr-discounted-price {
+  color: #111827;
+}
+
+.tr-buy-one-time-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -119,136 +127,136 @@ body {
   margin: 0 auto;
 }
 
-.buy-one-time-label {
+.tr-buy-one-time-label {
   display: flex;
   align-items: center;
   cursor: pointer;
   flex-grow: 1;
 }
 
-.buy-one-time-label input[type="radio"] {
+.tr-buy-one-time-label input[type="radio"] {
   margin-right: 12px;
   width: 20px;
   height: 20px;
   accent-color: #047857;
 }
 
-.buy-one-time-text {
+.tr-buy-one-time-text {
   font-size: 18px;
   font-weight: 600;
   color: #374151;
 }
 
-.buy-one-time-details {
+.tr-buy-one-time-details {
   font-size: 14px;
   color: #6b7280;
   font-style: italic;
   margin-top: 4px;
 }
 
-.buy-one-time-price {
+.tr-buy-one-time-price {
   font-size: 20px;
   font-weight: 700;
   color: #374151;
   align-self: center;
 }
 
-.buy-one-time-price-container {
+.tr-buy-one-time-price-container {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   text-align: right;
 }
 
-.buy-one-time-price-per-bottle {
+.tr-buy-one-time-price-per-bottle {
   font-size: 14px;
   color: #6b7280;
   font-weight: 400;
   margin-bottom: 2px;
 }
 
-.buy-one-time-price-total {
+.tr-buy-one-time-price-total {
   font-size: 20px;
   font-weight: 700;
   color: #374151;
 }
 
 @media (min-width: 640px) {
-  .serving-options-container {
+  .tr-serving-options-container {
     flex-wrap: wrap;
     justify-content: center;
   }
 }
 @media (max-width: 650px) {
-  .card-title {
+  .tr-card-title {
     font-size: 20px;
   }
 
-  .card-title span {
+  .tr-card-title span {
     font-size: 20px;
   }
 
-  .card-subtitle {
+  .tr-card-subtitle {
     font-size: 15px;
   }
 
-  .card-header {
+  .tr-card-header {
     font-size: 13px;
   }
 }
 @media (max-width: 550px) {
-  .card-title {
+  .tr-card-title {
     font-size: 17px;
   }
 
-  .card-title span {
+  .tr-card-title span {
     font-size: 17px;
   }
 
-  .card-subtitle {
+  .tr-card-subtitle {
     font-size: 12px;
   }
 
-  .card-header {
+  .tr-card-header {
     font-size: 11px;
   }
-  .price-label {
+  .tr-price-label {
     flex-direction: column-reverse;
     align-items: center;
   }
 }
 @media (max-width: 450px) {
-  .card-title {
+  .tr-card-title {
     font-size: 16px;
   }
 
-  .card-title span {
+  .tr-card-title span {
     font-size: 16px;
   }
 
-  .card-subtitle {
+  .tr-card-subtitle {
     font-size: 12px;
   }
 
-  .card-header {
+  .tr-card-header {
     font-size: 10px;
   }
 }
 @media (max-width: 400px) {
-  .buy-one-time-card {
+  .tr-buy-one-time-card {
     font-size: 10px;
   }
 }
 @media (max-width: 380px) {
-  .card-title {
+  .tr-card-title {
     font-size: 12px;
   }
 
-  .card-title span {
+  .tr-card-title span {
     font-size: 12px;
   }
 
-  .card-subtitle {
+  .tr-card-subtitle {
     font-size: 10px;
   }
 }
